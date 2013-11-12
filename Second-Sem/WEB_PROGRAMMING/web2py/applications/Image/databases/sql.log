@@ -1,0 +1,16 @@
+timestamp: 2010-04-18T09:26:46.961000
+CREATE TABLE image(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title CHAR(512),
+    file CHAR(512)
+);
+success!
+timestamp: 2010-04-18T09:26:47.016000
+CREATE TABLE comment(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    image_id REFERENCES image(id) ON DELETE CASCADE,
+    author CHAR(512),
+    email CHAR(512),
+    body TEXT
+);
+success!

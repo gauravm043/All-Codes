@@ -1,0 +1,572 @@
+Script started on Tuesday 22 January 2013 03:43:24 PM IST
+]0;gaurav@gaurav-Compaq-Presario-C700-Notebook-PC: ~gaurav@gaurav-Compaq-Presario-C700-Notebook-PC:~$ octace
+No command 'octace' found, did you mean:
+ Command 'octave' from package 'octave' (universe)
+octace: command not found
+]0;gaurav@gaurav-Compaq-Presario-C700-Notebook-PC: ~gaurav@gaurav-Compaq-Presario-C700-Notebook-PC:~$ octace[C[C[1Peve
+GNU Octave, version 3.6.2
+Copyright (C) 2012 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type `warranty'.
+
+Octave was configured for "i686-pc-linux-gnu".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/help-wanted.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+
+For information about changes from previous versions, type `news'.
+
+octave:1> a=20
+a =  20
+octave:2> a*2
+ans =  40
+octave:3> a*r
+error: `r' undefined near line 3 column 3
+octave:3> a*r[K3
+ans =  60
+octave:4> a-3
+ans =  17
+octave:5> a=[[1 2 3][C[C[C[C[C[C[C;[4 5 6][C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+a =
+
+   1   2   3
+   4   5   6
+
+octave:6> b=a'
+b =
+
+   1   4
+   2   5
+   3   6
+
+octave:7> a + a
+ans =
+
+    2    4    6
+    8   10   12
+
+octave:8> a*a'
+ans =
+
+   14   32
+   32   77
+
+octave:9> inv(b)[C[C[C
+error: inverse: argument must be a square matrix
+octave:9> inv(b)[Kb=a*a'
+b =
+
+   14   32
+   32   77
+
+octave:10> b=a*a'inv(b)[2Pa*a'inv(b)
+ans =
+
+   1.42593  -0.59259
+  -0.59259   0.25926
+
+octave:11> inv(b)*b
+ans =
+
+   1.0000e+00  -2.6645e-15
+  -1.7764e-15   1.0000e+00
+
+octave:12> c
+error: `c' undefined near line 12 column 1
+octave:12> [H[2Joctave:12> a
+a =
+
+   1   2   3
+   4   5   6
+
+octave:13> pinv(a)[C[C[C
+ans =
+
+  -0.94444   0.44444
+  -0.11111   0.11111
+   0.72222  -0.22222
+
+octave:14> a=[[1 1][C[C[C[C[C;[2 3][C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C
+a =
+
+   1   1
+   2   3
+
+octave:15> a=[a;[3 4][C[C[C[C[C][C[C[C[C[C[C[C[C[C
+a =
+
+   1   1
+   2   3
+   3   4
+
+octave:16> a=1:10
+a =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:17> a=1:10210:10
+a =
+
+    1    3    5    7    9
+
+octave:18> b=1:5
+b =
+
+   1   2   3   4   5
+
+octave:19> plot(b,a)[C[C[C[C[C
+octave:20> b=sin(a)[C[C[C
+b =
+
+   0.84147   0.14112  -0.95892   0.65699   0.41212
+
+octave:21> b=sin(a)plot(b,a)[4Pb=1:5plot(b,a)
+octave:22> plot(b,a)[1Pb=sin(a)plot(b,a)
+octave:23> plot(b,a)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[C[K[H[2Joctave:23> bp[K[Ka=1:100;[K;
+octave:24> plot(a,sin(a)[C[C[C)[C[C[C[C[C[C[C[C[C[C
+octave:25> a=-100000:100000;
+octave:26> a=-100000:100000;[C[C[C[C[C[C[C[C[C[C[C[3Pplot(a,sin(a))
+octave:27> plot(a,sin(a))[C[C[C[C[C[C[C[C[C[C[Ca=-100000:100000;[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ka=1:10
+a =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:28> a=1:10plot(a,sin(a))[1P(a))[1P(a))[1P(a))e(a))x(a))p(a))
+octave:29> for i=1:10
+> disp(i)[C[C[C
+> end
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+octave:30> enddisp(i)for i=1:10
+> if(i < 5)[C[C[C[C[C[C[C[C[C[C[C
+> disp(i)[C[C[C
+> end
+> end
+ 1
+ 2
+ 3
+ 4
+octave:31> enddisp(i)if(i < 5)for i=1:10
+> for i=1:10[C[Cend[Kfor i=1:10[C[C[Kfor i=1:10[C[Cend[Kdisp(i)[C[Cif(i < 5)[1P5)[1P5)%5) 5)[C[C[K[K[K[K[K[K[K[K[Kend
+octave:32> ]0;gaurav@gaurav-Compaq-Presario-C700-Notebook-PC: ~gaurav@gaurav-Compaq-Presario-C700-Notebook-PC:~$ vim q1[K[K[K[K[K[Kls
+a.c                                                              [0m[01;34mclasswork[0m  examples.desktop  out       sort.c           [01;34mVideos[0m
+[01;32ma.out[0m                                                            [01;34mDesktop[0m    in                [01;34mPictures[0m  [01;34mTemplates[0m
+[01;34marm-2012.09[0m                                                      [01;34mDocuments[0m  [01;34mMusic[0m             [01;34mPublic[0m    [01;34mUbuntu One[0m
+[01;31marm-2012.09-64-arm-none-linux-gnueabi-i686-pc-linux-gnu.tar.bz2[0m  [01;34mDownloads[0m  octave.txt        sort22.c  [01;34mUntitled Folder[0m
+]0;gaurav@gaurav-Compaq-Presario-C700-Notebook-PC: ~gaurav@gaurav-Compaq-Presario-C700-Notebook-PC:~$ vim q1.m
+[?1000h[?1049h[?1h=[1;43r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[43;1H"q1.m" [New File][>c[1;1H[33m  1 [m
+[1m[34m~                                                                                                                                     [3;1H~                                                                                                                                     [4;1H~                                                                                                                                     [5;1H~                                                                                                                                     [6;1H~                                                                                                                                     [7;1H~                                                                                                                                     [8;1H~                                                                                                                                     [9;1H~                                                                                                                                     [10;1H~                                                                                                                                     [11;1H~                                                                                                                                     [12;1H~                                                                                                                                     [13;1H~                                                                                                                                     [14;1H~                                                                                                                                     [15;1H~                                                                                                                                     [16;1H~                                                                                                                                     [17;1H~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [25;1H~                                                                                                                                     [26;1H~                                                                                                                                     [27;1H~                                                                                                                                     [28;1H~                                                                                                                                     [29;1H~                                                                                                                                     [30;1H~                                                                                                                                     [31;1H~                                                                                                                                     [32;1H~                                                                                                                                     [33;1H~                                                                                                                                     [34;1H~                                                                                                                                     [35;1H~                                                                                                                                     [36;1H~                                                                                                                                     [37;1H~                                                                                                                                     [38;1H~                                                                                                                                     [39;1H~                                                                                                                                     [40;1H~                                                                                                                                     [41;1H~                                                                                                                                     [42;1H~                                                                                                                                     [m[43;117H0,0-1[9CAll[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[43;1H[1m-- INSERT --[m[43;13H[K[43;117H0,1[11CAll[1;5H[?12l[?25h[?25l[33m [mf[43;117H1,2[1;6H[?12l[?25h[?25lfo[43;119H3[1;7H[?12l[?25h[?25l[33mfor[m[43;119H4[1;8H[?12l[?25h[?25l[33mr[m([43;117H[K[43;117H1,5[11CAll[1;9H[?12l[?25h[?25l[1;8H[K[43;119H4[1;8H[?12l[?25h[?25l[43;119H5[1;9H[?12l[?25h[?25l i[43;119H6[1;10H[?12l[?25h[?25li=[43;119H7[1;11H[?12l[?25h[?25l=[31m1[m[43;119H8[1;12H[?12l[?25h[?25l[31m1[m:[43;119H9[1;13H[?12l[?25h[?25l:[31m1[m[43;119H10[1;14H[?12l[?25h[?25l[31m10[m[43;120H1[1;15H[?12l[?25h[?25l
+[33m  2 [m     [2;10H[K[43;117H2,6 [2;10H[?12l[?25h[?25l d[43;119H7[2;11H[?12l[?25h[?25ldi[43;119H8[2;12H[?12l[?25h[?25lis[43;119H9[2;13H[?12l[?25h[?25lsp[43;119H10[2;14H[?12l[?25h[?25lp([43;117H[K[43;117H2,11[10CAll[2;15H[?12l[?25h[?25l(i[43;120H2[2;16H[?12l[?25h[?25li)[46m([mi[46m)[m[43;117H[K[43;117H2,13[10CAll[2;17H[?12l[?25h[?25l
+[33m  3 [m     [3;10H[K[2;14H(i)[43;117H3,6 [3;10H[?12l[?25h[?25l e[43;119H7[3;11H[?12l[?25h[?25len[43;119H8[3;12H[?12l[?25h[?25l[3;11H[K[43;119H7[3;11H[?12l[?25h[?25l[3;10H[K[43;119H6[3;10H[?12l[?25h[?25l[43;119H5[3;9H[?12l[?25h[?25l[43;119H4[3;8H[?12l[?25h[?25l[43;119H3[3;7H[?12l[?25h[?25l[43;119H2[3;6H[?12l[?25h[?25l[43;119H1[3;5H[?12l[?25h[?25l[33m [me[43;119H2[3;6H[?12l[?25h[?25len[43;119H3[3;7H[?12l[?25h[?25l[33mend[m[43;119H4[3;8H[?12l[?25h[43;1H[K[3;7H[?25l[43;117H3,3[11CAll[3;7H[?12l[?25h[?25l[43;117H[K[43;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l"q1.m" [New] 3L, 28C written
+[?1l>[?12l[?25h[?1049l]0;gaurav@gaurav-Compaq-Presario-C700-Notebook-PC: ~gaurav@gaurav-Compaq-Presario-C700-Notebook-PC:~$ vim q1.mls[Koctave q1.m 
+GNU Octave, version 3.6.2
+Copyright (C) 2012 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type `warranty'.
+
+Octave was configured for "i686-pc-linux-gnu".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/help-wanted.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+
+For information about changes from previous versions, type `news'.
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+]0;gaurav@gaurav-Compaq-Presario-C700-Notebook-PC: ~gaurav@gaurav-Compaq-Presario-C700-Notebook-PC:~$ ls
+a.c                                                              [0m[01;34mclasswork[0m  examples.desktop  out       sort22.c    [01;34mUntitled Folder[0m
+[01;32ma.out[0m                                                            [01;34mDesktop[0m    in                [01;34mPictures[0m  sort.c      [01;34mVideos[0m
+[01;34marm-2012.09[0m                                                      [01;34mDocuments[0m  [01;34mMusic[0m             [01;34mPublic[0m    [01;34mTemplates[0m
+[01;31marm-2012.09-64-arm-none-linux-gnueabi-i686-pc-linux-gnu.tar.bz2[0m  [01;34mDownloads[0m  octave.txt        q1.m      [01;34mUbuntu One[0m
+]0;gaurav@gaurav-Compaq-Presario-C700-Notebook-PC: ~gaurav@gaurav-Compaq-Presario-C700-Notebook-PC:~$ octave
+GNU Octave, version 3.6.2
+Copyright (C) 2012 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type `warranty'.
+
+Octave was configured for "i686-pc-linux-gnu".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/help-wanted.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+
+For information about changes from previous versions, type `news'.
+
+octave:1> a=[[1 2 3][C[C[C[C[C[C[C;[4 5 6][C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+a =
+
+   1   2   3
+   4   5   6
+
+octave:2> surface [K(a)[C[C[C
+octave:3> plot(a)[C[C[C
+octave:4> plot(a)surface(a)
+octave:5> mesh(a)[C[C[C
+octave:6> [H[2Joctave:6> plot(a,a**2)[C[C[C[C[C[C[C[C
+error: for A^b, A must be a square matrix
+error: evaluating argument list element number 2
+octave:6> plot(a,a**2)[1P2)[1P2)[1P2)p2)o2)w2)(2)a2),2)[C[C)[C[C[C[C[C
+error: `pow' undefined near line 6 column 8
+error: evaluating argument list element number 2
+octave:6> plot(a,pow(a,2))[C[1P2))[1P2))[1P2))[1P2))[1P2))[1P2))[C[C[C[K[K[K[K[K[K[K[K[K[Ka=1:100
+a =
+
+ Columns 1 through 22:
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22
+
+ Columns 23 through 44:
+
+    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38    39    40    41    42    43    44
+
+ Columns 45 through 66:
+
+    45    46    47    48    49    50    51    52    53    54    55    56    57    58    59    60    61    62    63    64    65    66
+
+ Columns 67 through 88:
+
+    67    68    69    70    71    72    73    74    75    76    77    78    79    80    81    82    83    84    85    86    87    88
+
+ Columns 89 through 100:
+
+    89    90    91    92    93    94    95    96    97    98    99   100
+
+octave:7> a=1:100plot(a,pow(a,2))[C[K[1P)[1P)[1P)[1P)[1P)[1P)[1P)a)*)*)2)
+error: for A^b, A must be a square matrix
+error: evaluating argument list element number 2
+octave:7> plot(a,a**2)[1P2)[1P2)^2)
+error: for A^b, A must be a square matrix
+error: evaluating argument list element number 2
+octave:7> plot(a,a^2)[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[Ka=[1 2 3][C[C[C[C[C[C[C
+a =
+
+   1   2   3
+
+octave:8> a=[K[Kb=a
+b =
+
+   1   2   3
+
+octave:9> f=[[2 [K5[K[K5 5 5][C[C[C[C[C[C[C;[5 5 5][C[C[C[C[C[C[C;[5 5 5][C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+f =
+
+   5   5   5
+   5   5   5
+   5   5   5
+
+octave:10> mesh(a,b,f)[C[C[C[C[C[C[C
+octave:11> [H[2Joctave:11> a=[[1 1 1][C[C[C[C[C[C[C;[2 2 2][C[C[C[C[C[C[C;[4 5 6][C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+a =
+
+   1   1   1
+   2   2   2
+   4   5   6
+
+octave:12> a=[[1 1 1];[2 2 2];[4 5 6]][C[C[C[C[C[C[C[C[C[C[C[16Pmesh(a,b,f)f=[[5 5 5];[5 5 5];[5 5 5]][C[C[C[C[C[C[C[C[C[C[Cb=a[Ka=[1 2 3]plot(a,a^2)[2Pa=[1 2 3]
+a =
+
+   1   2   3
+
+octave:13> a=[1 2 3][1 1 1];[2 2 2];[4 5 6]][C[C[C[C[C[C[C[C[C[C[C[16Pmesh(a,b,f)f=[[5 5 5];[5 5 5];[5 5 5]][C[C[C[C[C[C[C[C[C[C[Cb=a[K
+b =
+
+   1   2   3
+
+octave:14> b=aa=[1 2 3][1 1 1];[2 2 2];[4 5 6]][C[C[C[C[C[C[C[C[C[C[C[C[C[C1 2 3][K[6Pb=aa=[1 2 3][1 1 1];[2 2 2];[4 5 6]][C[C[C[C[C[C[C[C[C[C[C[16Pmesh(a,b,f)f=[[5 5 5];[5 5 5];[5 5 5]]
+f =
+
+   5   5   5
+   5   5   5
+   5   5   5
+
+octave:15> f=[[5 5 5];[5 5 5];[5 5 5]][C[C[C[C[C[C[C[C[C[C[Cb=a[Ka=[1 2 3][1 1 1];[2 2 2];[4 5 6]][C[C[C[C[C[C[C[C[C[C[C[16Pmesh(a,b,f)
+octave:16> zeros(3,3)[C[C[C[C[C
+ans =
+
+   0   0   0
+   0   0   0
+   0   0   0
+
+octave:17> eye(3,3)[C[C[C[C[C
+ans =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+   0   0   1
+
+octave:18> [H[2Joctave:18> x=1:2[K3
+x =
+
+   1   2   3
+
+octave:19> y=1:3
+y =
+
+   1   2   3
+
+octave:20> for i=1:3[K[K[K[K[K[K[K[K[Kz=zeros(3,3)[C[C[C[C[C
+z =
+
+   0   0   0
+   0   0   0
+   0   0   0
+
+octave:21> z=zeros(3,3)[7Py=1:3x=1:3eye(3,3)[3Px=1:3y=1:3z=zeros(3,3)[Kz=zeros(3,3)[7Py=1:3x=1:3y=1:3z=zeros(3,3)[K[K[K[K[K[K[K[K[K[K[K[Kfor i=1:3
+> for j=1:3
+> z(i,j)[C[C[C[C[C[C[C[C-[K=i+j
+> end
+> end
+[?1h=z =
+
+   2   0   0
+   0   0   0
+   0   0   0
+
+z =
+
+   2   3   0
+   0   0   0
+   0   0   0
+
+z =
+
+   2   3   4
+   0   0   0
+   0   0   0
+
+z =
+
+   2   3   4
+   3   0   0
+   0   0   0
+
+z =
+
+   2   3   4
+   3   4   0
+   0   0   0
+
+z =
+
+   2   3   4
+   3   4   5
+   0   0   0
+
+z =
+
+   2   3   4
+   3   4   5
+   4   0   0
+
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[Kz =
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K   2   3   4
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K   3   4   5
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K   4   5   0
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[Kz =
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K   2   3   4
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K   3   4   5
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K   4   5   6
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K[HM   0   0   0
+[HM   0   0   0
+[HM   2   3   0
+[HM
+[HMz =
+[HM
+[HM   0   0   0
+[HM   0   0   0
+[HM   2   0   0
+[HM
+[HMz =
+[43;1H[K[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K[K[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K[?1l>octave:22> z
+z =
+
+   2   3   4
+   3   4   5
+   4   5   6
+
+octave:23> mesh(x,y,z)[C[C[C[C[C[C[C
+octave:24> [H[2Joctave:24> x=1:10
+x =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:25> yy[K=1:10
+y =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:26> y=1:10x=1:10mesh(x,y,z)z[Kendz(i,j)=i+j[1Pfor j=1:3i=1:3j=1:3z(i,j)=i+j[1Pfor j=1:3i=1:3[C[K10
+> for i=1:10[C[C[4Py=1:10[C[Cx=1:10[C[Cy=1:10[C[Cfor i=1:10[1P=1:10j=1:10[C[C[C[C[C
+> z(i,j)=i+j[C
+> end
+> end
+[?1h=z =
+
+   2   3   4
+   3   4   5
+   4   5   6
+
+z =
+
+   2   3   4
+   3   4   5
+   4   5   6
+
+z =
+
+   2   3   4
+   3   4   5
+   4   5   6
+
+z =
+
+   2   3   4   5
+   3   4   5   0
+   4   5   6   0
+
+z =
+
+   2   3   4   5   6
+   3   4   5   0   0
+   4   5   6   0   0
+
+z =
+
+   2   3   4   5   6   7
+   3   4   5   0   0   0
+   4   5   6   0   0   0
+
+z =
+
+   2   3   4   5   6   7   8
+   3   4   5   0   0   0   0
+   4   5   6   0   0   0   0
+
+[7m-- less -- (f)orward, (b)ack, (q)uit[27m[K[K[?1l>octave:27> endz(i,j)=i+jfor j=1:10i=1:10[4Py=1:10x=1:10mesh(x,y,z)z[Kmesh(x,y,z)
+octave:28> [H[2Joctave:28> mesh(x,y,z)end[Kz(i,j)=i+jfor j=1:10i=1:10[4Py=1:10x=1:10y=1:10for i=1:10j=1:10i=1:10[4Py=1:10x=1:10y=1:10x=1:10
+x =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:29> x=1:10mesh(x,y,z)end[Kz(i,j)=i+jfor j=1:10i=1:10[4Py=1:10
+y =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:30> y=1:10x=1:10mesh(x,y,z)end[Kz(i,j)=i+jfor j=1:10i=1:10[4Py=1:10x=1:10mesh(x,y,z)z[Kendz(i,j)=i+j[1Pfor j=1:3i=1:3[K10[K[K[K[K[K[K[K[K[K[Kz=zeros(10,10)[C[C[C[C[C[C[C
+z =
+
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0
+
+octave:31> for i=1:10
+> for j=-[K1:10
+> z(i,j)[C[C[C[C[C[C[C[C=i**2+j**2;
+> end
+> end
+octave:32> endz(i,j)=i**2+j**2;[C[C[C[C[C[C[C[C[C[C[C[7Pfor j=1:10i=1:10z=zeros(10,10)[C[C[C[C[C[C[C[C[C[C[C[8Py=1:10z=zeros(10,10)[C[C[C[C[C[C[C[C[C[C[C[4Pfor i=1:10j=1:10z(i,j)=i**2+j**2;[C[C[C[C[C[C[C[C[C[C[Cend[K[K[K[Kmesh(x,y,z)[C[C[C[C[C[C[C
+octave:33> mesh(x,y,z)end[Kz(i,j)=i**2+j**2;[C[C[C[C[C[C[C[C[C[C[C[7Pfor j=1:10i=1:10j=1:10z(i,j)=i**2+j**2;[C[C[C[C[C[C[C[C[C[C[C[7Pfor j=1:10i=1:10
+> for i=1:10[C[Cmesh(x,y,z)[C[Cend[Kmesh(x,y,z)[C[C[1Pfor i=1:10[C[C[Kfor i=1:10[C[Cmesh(x,y,z)[C[Cend[Kz(i,j)=i**2+j**2;[C[C[7Pfor j=1:10
+> for j=1:10i=1:10[C[Cmesh(x,y,z)[C[Cend[Kz(i,j)=i**2+j**2;si**2+j**2;qi**2+j**2;ri**2+j**2;ti**2+j**2;(i**2+j**2;[C[C[C[C[C[C[C[C[C);[C[C[C[C[C[C[C[C[C[C[C[C
+> end
+> end
+octave:34> endz(i,j)=sqrt(i**2+j**2);[C[C[C[C[C[C[C[C[C[C[C[13Pfor j=1:10i=1:10mesh(x,y,z)
+octave:35> [H[2Joctave:35> x=1:100
+x =
+
+ Columns 1 through 22:
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22
+
+ Columns 23 through 44:
+
+    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38    39    40    41    42    43    44
+
+ Columns 45 through 66:
+
+    45    46    47    48    49    50    51    52    53    54    55    56    57    58    59    60    61    62    63    64    65    66
+
+ Columns 67 through 88:
+
+    67    68    69    70    71    72    73    74    75    76    77    78    79    80    81    82    83    84    85    86    87    88
+
+ Columns 89 through 100:
+
+    89    90    91    92    93    94    95    96    97    98    99   100
+
+octave:36> y=1:1-00[K[K[K00;
+octave:37> z=zeros(100,100)[C[C[C[C[C[C[C[C[C;
+octave:38> for i [K=1:100
+> for j=1:100
+> z(i,j)[C[C[C[C[C[C[C[C=exp(i+j)[C[C[C[C[C;
+> end
+> end
+octave:39> mesh(x,y,z)[C[C[C[C[C[C[C
+octave:40> mesh(x,y,z)end[Kz(i,j)=exp(i+j);[C[C[C[C[C[C[C[C[C[C[C[5Pfor j=1:100i=1:100j=1:100i=1:100[K
+> for i=1:10
+^C
+octave:40> for i=1:10mesh(x,y,z)end[Kz(i,j)=exp(i+j);[C[C[C[C[C[C[C[C[C[C[C[5Pfor j=1:100i=1:100z=zeros(100,100);[C[C[C[C[C[C[C[C[C[C[C[9Py=1:100;[1Px=1:100[C[K
+x =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:41> x=1:10for i=1:10mesh(x,y,z)end[Kz(i,j)=exp(i+j);[C[C[C[C[C[C[C[C[C[C[C[5Pfor j=1:100i=1:100z=zeros(100,100);[C[C[C[C[C[C[C[C[C[C[C[9Py=1:100;[1Px=1:100y=1:100;[K[K
+y =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:42> y=1:10x=1:10for i=1:10[4Px=1:10y=1:10x=1:10for i=1:10mesh(x,y,z)end[Kz(i,j)=exp(i+j);[C[C[C[C[C[C[C[C[C[C[C[5Pfor j=1:100z(i,j)=exp(i+j);[C[C[C[C[C[C[C[C[C[C[C[5Pfor j=1:100i=1:100z=zeros(100,100);[1P);[1P,10);[C[C[C[C[C
+octave:43> z=zeros(10,10);[C[C[C[C[C[C[C[C[C[C[C[9Py=1:10x=1:10for i=1:10mesh(x,y,z)[1Pfor i=1:10
+> for i=1:10[C[Cz=zeros(10,10);[C[C[5Pfor i=1:10[1P=1:10j=1:10
+> for j=1:10i=1:10[C[Cz=zeros(10,10);[C[C[9Py=1:10[C[Cx=1:10[C[Cfor i=1:10[C[Cmesh(x,y,z)[C[Cend[Kz(i,j)=exp(i+j);
+> z(i,j)=exp(i+j);[C[C[6Pfor j=1:10i=1:10[C[Cz=zeros(10,10);[C[C[9Py=1:10[C[Cx=1:10[C[Cfor i=1:10[C[Cmesh(x,y,z)[C[Cend[K
+> endz(i,j)=exp(i+j);[C[Cend[K
+octave:44> endz(i,j)=exp(i+j);[C[C[C[C[C[C[C[C[C[C[C[6Pfor j=1:10i=1:10z=zeros(10,10);[C[C[C[C[C[C[C[C[C[C[C[9Py=1:10x=1:10for i=1:10mesh(x,y,z)end[Kmesh(x,y,z)
+octave:45> mesh(x,y,z)
+octave:46> ]0;gaurav@gaurav-Compaq-Presario-C700-Notebook-PC: ~gaurav@gaurav-Compaq-Presario-C700-Notebook-PC:~$ exit
+exit
+
+Script done on Tuesday 22 January 2013 04:29:53 PM IST

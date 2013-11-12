@@ -1,0 +1,46 @@
+//--------------------------------------------***LAB--1***--------------------------------------------------------------//
+
+
+1==>>
+we have a thing requires(=IS_EMAIL().....) and required(True) 
+
+in a col name can do Field('resume','upload')             ///  type is defined as upload
+and also date
+
+
+
+NOTE THAT nmap 127.0.0.1    OR NMAPPING THE IFCONFIG  SHOWS ACTIVE SERVERS ON UR MACHINES
+
+
+we have an MVC structure 
+NEED - there is an independence among them we can redefine the views but the models will remain the same
+
+
+automatically web2py appends an id col for every table u hv created
+
+see some things on welcome---->default.py enter_student
+
+IF A FIELD IS REQ. TO CONTAIN A VALUE DO notnull=True
+
+
+
+============>>>>>>   A VERY IMP POINT IS TO CREATE A FORM 
+
+form=SQLFORM(db.student)
+return dict(form=form)
+
+unique=True
+label=enter....
+
+
+2==>>
+
+REFER TO GENERAL FORMAT FOR QUERING DATABASES IN SIRS NOTES
+
+
+REQUIRED=TRUE IS NOT DEFINED FOR A DATABASE BUT WE WANT IT FOR A FORM OF A TABLE   
+
+
+notnull=True does the validation at the DB level                                              ## KEY POINT
+and required=True  works for forms
+

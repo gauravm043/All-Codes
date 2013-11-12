@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "modules1.py", line 5, in <module>
+    print hello
+NameError: name 'hello' is not defined

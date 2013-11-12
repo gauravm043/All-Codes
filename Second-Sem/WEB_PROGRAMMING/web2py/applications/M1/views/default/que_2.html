@@ -1,0 +1,9 @@
+{{extend 'layout.html'}}
+<h3>Hiii...  The songs of singer BALU are: </h3>
+<div style='color:blue'>
+{{for i in range(len(k)):}}
+{{=i+1}}:
+{{=k[i]['name']}}
+<br/>
+{{pass}}
+</div>

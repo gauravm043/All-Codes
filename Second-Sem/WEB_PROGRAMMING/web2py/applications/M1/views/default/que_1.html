@@ -1,0 +1,10 @@
+{{extend 'layout.html'}}
+
+<h3> Hiii.     THE SONGS BY SINGER OF ID = 3    </h3>
+<div style='color:blue'>
+{{for i in range(len(k)):}}
+{{=i+1}}:
+{{=k[i]['name']}}
+<br/>
+{{pass}}
+</div>

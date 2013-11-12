@@ -1,0 +1,59 @@
+on doing ifconfig we get 
+-> subnet mask - 255.255.255.0
+hwaddr-> it is the mac address
+inet-> ip of subnet
+network address = mask.IP
+
+in a subnet we have layer 2 of communication ie we can use only MAC(64-BIT) addr for commu.
+
+
+TTL is time to live 
+
+we have a 7 layer OSI model
+the big boxes in lab are  switches
+any 2 comp. in machines can commu. through certain protocol eg- ETHERNET
+
+-->> NOW HERE WHEN WE TRY TO COMMUNICATE VIA PING THE ARP TECH IS USED AND FROM IP WE CAN GET MAC ADDRESS
+
+
+
+1-Physical
+2-Data Link
+3-Network
+4-Transport
+5-Application
+
+
+When multi commu. takes place -->> collission to avoid it we use a switch.
+switch will forward the packet after using MAC address to find the correct port
+therefore a switch facilitates multiple talking
+
+SWITCH IS L2 DEVICE
+
+Now when we want to communicate to comp. of other subnets we  cant do it in L2 we need to get to L3 where we use gateways
+When we want to send a packet to other subnet our pc will and mask with ip of receiver eg- 10.3.5.1 send to 10.4.4.2
+here the network mask is same(since same network) but there subnetaddresses are different and ==>> they are on diff subnets
+A gateway has multiple interfaces which keep record of ip addrs or diff subnets
+
+
+
+NOW OUR COMP. WILL SEND PACKET TO A GATEWAY IFF THE SUBNET ADDRESS IS NOT ITS OWN ELSE IT WILL SEND PACKET TO A SWITCH
+TO SEE THE GATEWAY(Router)--->>>>>
+
+
+
+route -n
+
+
+for 0.0.0.0(not known any one) gateway is defined
+
+Now to avoid looping back to same machine we define a ttl assigned ( in L3 device) and every time it is passing by a L3 device like gateway ttl is decreased by 1 and if a looping back condi is there ttl=0 and the packet is dropped and a ttl is assigned o a packet by our own machine eg-
+
+ping proxy ttl---->>> 63 
+ping subnet ttl--->>>64
+
+
+
+
+
+

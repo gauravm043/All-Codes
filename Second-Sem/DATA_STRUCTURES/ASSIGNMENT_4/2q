@@ -1,0 +1,128 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct tree
+{
+     char c;
+     int f;
+     int v;
+     struct tree*left;
+     struct tree*right;
+}
+node;
+
+int SIZE=0;
+int arr[100]={0};
+node*minheap[1000];
+int fre[300]={0};
+int cmin=0;
+void print(node*a);
+
+void insert_min(node*d)
+{
+     cmin++;
+     minheap[cmin]=d;
+     int i,p;
+     node*tmp;
+     i=cmin;
+     while(i>1)
+     {
+	  p=i/2;
+	  if(p>0&&minheap[p]->f>minheap[i]->f)
+	  {
+	       tmp=minheap[i];
+	       minheap[i]=minheap[p];
+	       minheap[p]=tmp;
+	       i=p;
+	  }
+	  else
+	       break;
+     }
+}
+void sd_min()
+{
+     int i=1;
+     int min;
+     node*tmp;
+     while(i<=cmin/2 &&(minheap[i]->f>minheap[2*i]->f||minheap[i]->f>minheap[2*i+1]->f))
+     {
+	  min=minheap[2*i]->f<=minheap[2*i+1]->f?2*i:2*i+1;
+	  tmp=minheap[i];
+	  minheap[i]=minheap[min];
+	  minheap[min]=tmp;
+	  i=min;
+     }
+}
+
+node* del_min()
+{
+     node*min;
+     min=minheap[1];
+     minheap[1]=minheap[cmin];
+     cmin--;
+     sd_min();
+     return min;
+}
+
+
+int main()
+{
+     int c;
+     int i;
+     node*new;
+     node*new1;
+     node*new2;
+
+     while(c!=EOF)
+     {
+	  c=getchar();
+	  fre[c]++;
+     }
+     for(i=0;i<256;i++)
+     {
+	  if(fre[i]!=0)
+	  {
+	       new=(node*)malloc(sizeof(node));
+	       new->c=(char)i;
+	       new->f=fre[i];
+	       new->left=NULL;
+	       new->right=NULL;
+	       new->v=1;
+	       insert_min(new);
+	  }
+     }
+     while(cmin!=1)
+     {
+	  new1=del_min();
+	  new2=del_min();
+	  new=(node*)malloc(sizeof(node));
+	  new->f=new1->f+new2->f;
+	  new->left=new2;
+	  new->right=new1;
+	  new->c='d';
+	  new->v=0;
+	  insert_min(new);
+     }
+     print(new);
+     return 0;
+}
+void print(node*root)
+{
+     int i;
+     if(root->left==NULL&&root->right==NULL)
+     {
+	  printf("%c :",root->c);
+	  for(i=0;i<=SIZE;i++)
+	       printf("%d",arr[i]);
+	  printf("\n");
+	  --SIZE;
+	  return;
+     }
+
+     arr[++SIZE]=0;
+     print(root->left);
+     //if(root->v==1)
+   //  printf("%c    %d\n",root->c,root->f);
+     arr[++SIZE]=1;
+     print(root->right);
+}
+

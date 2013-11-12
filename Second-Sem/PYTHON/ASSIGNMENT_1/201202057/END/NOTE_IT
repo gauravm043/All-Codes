@@ -1,0 +1,26 @@
+And note that when you are inputting many nos. as raw inputs and u are using them as nos u need to typecast them
+Also you want to write to a file f.write(str(it))
+
+x=" "
+x=x+a[i]+b[i] etc
+
+Remember it 
+
+Note of l[0:-2]
+or l[9:-1]
+
+Make the program of matrix multiplication
+
+For python lists we have many functions:
+
+
+
+
+l=[]
+
+l.sort()
+l.append()
+l.count(int n)
+l.remove(int n)
+l.reverse()
+l.remove()

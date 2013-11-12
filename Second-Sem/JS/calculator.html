@@ -1,0 +1,45 @@
+<html>
+     <head>
+	  <title>Euro Calculator </title>
+	  <script language="JavaScript">
+	       <!--
+	       var a=0
+	       function calculate(){
+		    if (a==0){
+			 alert("nhgjhg")
+			 document.forms[0].euro.value=Math.round(document.forms[0].amount.val
+			 ue / document.forms[0].currency[document.forms[0].currency.
+			 selectedIndex].value * 100) / 100
+		    }
+		    if (a==1){
+			 document.forms[0].amount.value=Math.round(document.forms[0].euro.val
+			 ue * document.forms[0].currency[document.forms[0].currency.
+			 selectedIndex].value * 100) / 100
+		    }
+	       }
+	       //-->
+	  </script>
+     </head>
+     <body>
+	  <h2>Euro Calculator </h2>
+	  <form>
+	       <input name=amount size=10 onchange="a=0">
+	       <select name="currency" onchange="calculate()"   onfocus="calculate()">
+		    <option value="13.7603">ATS</option>
+		    <option value="40.3399">BEF/LUF</option>
+		    <option value="1.95583">DEM</option>
+		    <option value="166.386">ESP</option>
+		    <option value="5.94573">FIM</option>
+		    <option value="6.55957">FRF</option>
+		    <option value="0.787564">IEP</option>
+		    <option value="1936.27">ITL</option>
+		    <option value="2.20371">NLG</option>
+		    <option value="200.482">PTE</option>
+	       </select>
+	       corresponds to
+	       <input name=euro size=10 onchange="a=1">
+	       Euros.<br>
+	       <input type=button value="Calculate" onclick="calculate()">
+	  </form>
+     </body>
+</html>

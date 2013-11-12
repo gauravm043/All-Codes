@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<h3>
+     The song given by BALU in movie Shankarabharanam are:
+</h3>
+<div style='color:blue'>
+{{for i in range(len(ans)):}}
+{{=i+1}}:
+{{=ans[i]['name']}}
+<br/>
+{{pass}}
+</div>

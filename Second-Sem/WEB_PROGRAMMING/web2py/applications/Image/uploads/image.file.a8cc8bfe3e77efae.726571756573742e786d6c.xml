@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<methodCall orderid="889923" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="myschema.xsd">
+<methodName>addNum</methodName>
+<params>
+<paramtype>int</paramtype>
+<param>3</param>
+</params>
+<params><paramtype>int</paramtype>
+<param>4</param>
+</params>
+<return>int</return>
+</methodCall>

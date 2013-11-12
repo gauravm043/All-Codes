@@ -1,0 +1,86 @@
+timestamp: 2013-03-15T12:39:18.794453
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2013-03-15T12:39:18.932862
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-03-15T12:39:19.055207
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2013-03-15T12:39:19.177658
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2013-03-15T12:39:19.289632
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-03-15T12:39:19.401861
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2013-03-15T12:40:59.839340
+CREATE TABLE courses(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    credits INTEGER
+);
+success!
+timestamp: 2013-03-15T13:06:17.404815
+CREATE TABLE faculty(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    courses CHAR(512),
+    designation CHAR(512)
+);
+success!
+timestamp: 2013-03-15T22:05:47.412157
+CREATE TABLE student(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    courses_taken CHAR(512)
+);
+success!
+timestamp: 2013-03-16T00:50:55.283924
+ALTER TABLE student ADD mothers_name CHAR(512);
+timestamp: 2013-03-16T00:50:55.447423
+ALTER TABLE student ADD address TEXT;
+timestamp: 2013-03-16T00:50:55.604281
+ALTER TABLE student ADD institution_name CHAR(512);
+timestamp: 2013-03-16T00:50:55.748564
+ALTER TABLE student ADD date_of_birth DATE;
+timestamp: 2013-03-16T00:50:55.881899
+ALTER TABLE student ADD fathers_name CHAR(512);

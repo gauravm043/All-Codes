@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+<div style='color:blue'>
+{{for i in range(len(k)):}}
+{{=i+1}}:
+{{=k[i]['name']}}      <pre>                                          {{=k[i]['singing_actor']}}     </pre>
+<br/>
+{{pass}}
+</div>

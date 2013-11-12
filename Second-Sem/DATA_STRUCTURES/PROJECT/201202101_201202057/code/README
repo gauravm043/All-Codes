@@ -1,0 +1,9 @@
+For standalone number bloom filter, see bloom.c
+For speed comparison with AVL, see bloom_without_linearsearch.c (gives some false outputs)
+For application, see spellchecker.c using dictionary from brit-a-z.txt
+
+'-time' added in name when only printing time in output file for graph
+
+bloom-time.c - conatins time I/O from bloom.c
+AVL-time.c - conatins time I/O from AVL.c
+bloom_without_linearsearch-time.c - conatins time I/O from bloom_without_linearsearch.c

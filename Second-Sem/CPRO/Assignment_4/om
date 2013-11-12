@@ -1,0 +1,14 @@
+
+#include <stdio.h>
+// Code to print hello world and some more text
+// This comment stays
+
+int main () {
+    
+    Char * text = "Hello World";
+    printf ("%s\n/*A comment inside a \"string\"*/", text);
+    return 0;
+
+}
+
+// You will need to print this too.

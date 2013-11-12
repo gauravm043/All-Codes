@@ -1,0 +1,6 @@
+{{extend 'layout.html'}}
+<h3> NAME:  &nbsp;&nbsp;&nbsp;&nbsp; DURATION: </h3>
+
+{{for i in songs:}}
+<h5> {{=i['name']}} &nbsp;&nbsp;&nbsp;&nbsp; {{=i['duration']}} </h5>
+{{pass}}

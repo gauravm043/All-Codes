@@ -1,0 +1,93 @@
+timestamp: 2013-03-10T16:07:49.508266
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2013-03-10T16:07:49.672916
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-03-10T16:07:49.785591
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2013-03-10T16:07:49.898101
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2013-03-10T16:07:50.012762
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-03-10T16:07:50.133980
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2013-03-10T16:07:50.268340
+CREATE TABLE artist(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    actors CHAR(512),
+    directors CHAR(512),
+    singers CHAR(512)
+);
+success!
+timestamp: 2013-03-10T16:08:54.156836
+CREATE TABLE movie(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    hero INTEGER REFERENCES artist (id) ON DELETE CASCADE,
+    director CHAR(512),
+    release_date DATE
+);
+success!
+timestamp: 2013-03-10T16:09:30.740422
+ALTER TABLE movie ADD releasedate DATE;
+timestamp: 2013-03-10T16:10:10.841042
+CREATE TABLE song(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    duration INTEGER,
+    singer CHAR(512),
+    composer CHAR(512),
+    movie CHAR(512),
+    singingactor CHAR(512)
+);
+success!
+timestamp: 2013-03-10T16:10:11.080242
+CREATE TABLE rating(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    users CHAR(512),
+    song CHAR(512),
+    rating INTEGER
+);
+success!

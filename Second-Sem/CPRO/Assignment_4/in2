@@ -1,0 +1,4 @@
+ Char * text = "Hello World";
+  11             printf ("%s\n/*A comment inside a \"string\"*/", text);
+   12             return 0;
+

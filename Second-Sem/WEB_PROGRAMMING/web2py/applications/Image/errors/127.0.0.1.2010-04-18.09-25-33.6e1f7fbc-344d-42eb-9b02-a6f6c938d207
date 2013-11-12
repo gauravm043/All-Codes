@@ -1,0 +1,17 @@
+(dp1
+S'output'
+p2
+S''
+sS'layer'
+p3
+S'C:\\Users\\anika\\Desktop\\web2py_win\\web2py\\applications\\Image/models/db.py'
+p4
+sS'code'
+p5
+S'db=DAL("sqlite3://db.db")\ndb.define_table(\'image\',\n   Field(\'title\'),\n   Field(\'file\', \'upload\'))\ndb.define_table(\'comment\',\n   Field(\'image_id\', db.image),\n   Field(\'author\'),\n   Field(\'email\'),\n   Field(\'body\', \'text\'))\ndb.image.title.requires = [IS_NOT_EMPTY(),\n                         IS_NOT_IN_DB(db, db.image.title)]\n\ndb.comment.image_id.requires = IS_IN_DB(db, db.image.id, \'%(title)s\')\ndb.comment.author.requires = IS_NOT_EMPTY()\ndb.comment.email.requires = IS_EMAIL()\ndb.comment.body.requires = IS_NOT_EMPTY()\n\ndb.comment.image_id.writable = db.comment.image_id.readable = False\n'
+p6
+sS'traceback'
+p7
+S'Traceback (most recent call last):\n  File "gluon/restricted.py", line 173, in restricted\n  File "C:\\Users\\anika\\Desktop\\web2py_win\\web2py\\applications\\Image/models/db.py", line 1, in <module>\n  File "gluon/sql.py", line 3783, in DAL\n  File "gluon/sql.py", line 1213, in __init__\nSyntaxError: database type not supported: sqlite3://db.db\n'
+p8
+s.

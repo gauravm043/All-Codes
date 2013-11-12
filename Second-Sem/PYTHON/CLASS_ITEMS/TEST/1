@@ -1,0 +1,35 @@
+# $@ PRINTS ALL THE COMMAND LINE ARGUMENTS AND $# PRINTS THEIR NUMBER
+
+echo $USER
+echo $PWD
+echo $OSTYPE
+
+echo HELLO MR. $USER TODAY IS `date | cut -d ' ' -f2,3`
+echo HOW ARE YOU DOING THIS
+
+if [ `date | cut -d ' ' -f4 | cut -d ':' -f1` le 12 ]
+then
+     echo AFTERNOON 
+else
+     echo MORNING
+fi
+
+let sum=`expr 38 + 19`
+echo $sum
+let pro=`expr 38 \* 19`
+echo $pro
+let div=`expr 38 / 19`
+echo $div
+let sub=`expr 38 - 19`
+echo $sub
+
+let pro=1
+for i in $@
+do
+     let pro=`expr $pro \* $i`
+done
+
+echo $pro
+
+let a=$@
+printf ${a[1]}

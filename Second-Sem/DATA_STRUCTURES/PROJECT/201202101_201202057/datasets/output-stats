@@ -1,0 +1,23 @@
+TESTCASE t1:
+NUMBER OF FLASE OUTPUTS: 8
+PROBABILITY OF FLASE OUTPUTS: 0.00 %
+No. actually there: 68
+No. actually not there: 80054
+
+TESTCASE t2:
+NUMBER OF FLASE OUTPUTS: 2
+PROBABILITY OF FLASE OUTPUTS: 0.00 %
+No. actually there: 15
+No. actually not there: 16166
+
+TESTCASE t3:
+NUMBER OF FLASE OUTPUTS: 11
+PROBABILITY OF FLASE OUTPUTS: 0.00 %
+No. actually there: 69
+No. actually not there: 67756
+
+TESTCASE t4:
+NUMBER OF FLASE OUTPUTS: 12
+PROBABILITY OF FLASE OUTPUTS: 0.00 %
+No. actually there: 82
+No. actually not there: 82383

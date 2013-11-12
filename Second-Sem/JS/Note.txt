@@ -1,0 +1,26 @@
+Learn
+--
+
+onmouseclick
+onmouseover
+onload
+onunload
+onmouseout
+onfocus
+document.write
+document.getElementById
+document.getElementByName
+setTimeout
+event.clientX
+event.clientY
+document.forms[0].src and others
+
+DATA TYPES :
+
+new Date()	Initialises with current date and time
+new String()
+new Object()
+to string
+to date
+
+etc...

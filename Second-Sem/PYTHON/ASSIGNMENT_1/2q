@@ -1,0 +1,62 @@
+#SEARCHING
+
+def search():
+     words=[]
+     f1=open('PHONE_DIRECTORY','r')
+     lines=f1.readlines()
+     for i in lines:
+	  words.append(i.split(" "))
+     name=raw_input('ENTER NAME: ')
+     for i in range(len(words)):
+	  if words[i][0]==name:
+	       print 'NUMBER OF '+ name + ' IS: ' + words[i][1]
+	       break
+     else:
+	  print 'NO MATCH FOUND'
+     f1.close()
+
+#ADDING	
+
+def add():
+     name=raw_input('ENTER NAME: ')
+     num=input('ENTER NUMBER: ')
+     f1=open('PHONE_DIRECTORY','a')
+     f1.write(name)
+     f1.write(" ")
+     f1.write('%d'%num)
+     f1.write("\n")
+     f1.close()
+
+#MODIFY
+
+def modify():
+     ch=1
+     words=[]
+     f1=open('PHONE_DIRECTORY','ra')
+     name=raw_input('ENTER NAME: ')
+     while ch!=0:
+      old=f1.readwords()
+      if old==name:
+	  num=input('ENTER NEW NUMBER: ')
+	  f1.write('%d'%num)
+	  ch=1
+
+
+
+n=1
+while n!=7:
+  print 'ENTER YOUR CHOICE:'
+  print '1-SEARCH'
+  print '2-ADD AN ENTRY'
+  print '3-MODIFY NUMBER'
+  print '4-VIEW ALL'
+  print '5-SAVE TO A FILE'
+  print '6-LOAD FROM A FILE'
+  print '7-EXIT'
+  n=input()
+  if n==1:
+     search()
+  elif n==2:
+     add()
+  elif n==3:
+     modify()

@@ -1,0 +1,4 @@
+def index()
+	images=db().select(db.image.ALL,orderby=db.image.title)
+	return dict(images=images)
+

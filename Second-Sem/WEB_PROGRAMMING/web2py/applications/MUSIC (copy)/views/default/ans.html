@@ -1,0 +1,23 @@
+{{extend 'layout.html'}}
+{{if(k[0]['profession']=='Actor'):}}
+<h4> Selected ID is of {{=k[0]['name']}} who is an actor and the movies in which he worked are:</h4>
+{{for i in range(len(m)):}}
+<pre> {{=i+1}}:     {{=m[i]['name']}} </pre>
+{{pass}}
+{{pass}}
+
+
+
+{{if(k[0]['profession']=='Director'):}}
+<h4> Selected ID is of {{=k[0]['name']}} who is a Director and the Movies which he Directed are:</h4>
+{{for i in range(len(m)):}}
+<pre> {{=i+1}}:     {{=m[i]['name']}} </pre>
+{{pass}}
+{{pass}}
+
+{{if(k[0]['profession']=='Singer'):}}
+<h4>Selected ID is of  {{=k[0]['name']}} who is a Singer and the songs are:</h4>
+{{for i in range(len(s)):}}
+<pre> {{=i+1}}:     {{=s[i]['name']}} </pre>
+{{pass}}
+{{pass}}

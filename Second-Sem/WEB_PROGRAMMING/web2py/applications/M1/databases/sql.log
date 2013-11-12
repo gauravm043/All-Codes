@@ -1,0 +1,113 @@
+timestamp: 2013-03-09T15:52:42.450275
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2013-03-09T15:52:42.614204
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-03-09T15:52:42.726837
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2013-03-09T15:52:42.838373
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2013-03-09T15:52:42.949797
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-03-09T15:52:43.060885
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2013-03-09T15:52:43.182701
+CREATE TABLE artist(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    actors CHAR(512),
+    directors CHAR(512),
+    singers CHAR(512)
+);
+success!
+timestamp: 2013-03-09T15:56:24.590936
+CREATE TABLE movie(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    director CHAR(512),
+    release_date DATE
+);
+success!
+timestamp: 2013-03-09T16:02:59.501842
+ALTER TABLE movie ADD hero INTEGER REFERENCES artist (id) ON DELETE CASCADE;
+timestamp: 2013-03-09T16:20:17.135205
+CREATE TABLE songss(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    namessss CHAR(512),
+    lengthsss CHAR(512),
+    singersss CHAR(512),
+    composersss CHAR(512),
+    moviesss CHAR(512)
+);
+success!
+timestamp: 2013-03-09T16:20:30.122841
+CREATE TABLE song(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    namessss CHAR(512),
+    lengthsss CHAR(512),
+    singersss CHAR(512),
+    composersss CHAR(512),
+    moviesss CHAR(512)
+);
+success!
+timestamp: 2013-03-09T16:20:44.646112
+ALTER TABLE song ADD name CHAR(512);
+timestamp: 2013-03-09T16:21:14.520052
+ALTER TABLE song ADD duration CHAR(512);
+timestamp: 2013-03-09T16:21:30.824692
+ALTER TABLE song ADD singer CHAR(512);
+timestamp: 2013-03-09T16:21:31.038196
+ALTER TABLE song ADD movie CHAR(512);
+timestamp: 2013-03-09T16:21:31.170995
+ALTER TABLE song ADD composer CHAR(512);
+timestamp: 2013-03-09T16:35:07.189917
+CREATE TABLE rating(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    users CHAR(512)
+);
+success!
+timestamp: 2013-03-09T16:35:36.648863
+ALTER TABLE rating ADD song INTEGER REFERENCES song (id) ON DELETE CASCADE;
+timestamp: 2013-03-09T16:45:35.632981
+ALTER TABLE rating ADD rating INTEGER;

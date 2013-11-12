@@ -1,0 +1,20 @@
+/*gaurav*/
+#include <stdio.h>
+// Code to print hello world and some more text
+// This comment stays
+
+int main () {
+    /*
+	 Create /*the /*character*/ string to be*/ printed
+	    */
+    Char * text = "Hell/*o Wor*/ld";
+    printf ("%s\n/*A comment inside a \"string\"*/", text);
+    return 0;
+/*
+       Remove /*this*/ comment
+				       */
+}
+/*
+       An ending } may /*not be*/ the /*end of*/ the input.
+       */
+// You will need to print this too.

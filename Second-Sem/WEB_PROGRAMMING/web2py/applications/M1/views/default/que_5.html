@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<h3>
+      The list of all songs and singers with rating 4 or more ...
+ </h3>
+<div style='color:blue'>
+{{for i in range(len(k)):}}
+{{=i+1}}:
+{{=k[i]['song']['name']}}   <pre>                        Given by : {{=k[i]['artist']['singers']}}         </pre>
+<br/>
+{{pass}}
+</div>

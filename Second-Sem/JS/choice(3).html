@@ -1,0 +1,25 @@
+<html>
+     <head>
+	  <title>Title of the Page</title>
+	  <script language="JavaScript">
+	       <!--
+	       function message(field){
+		    window.status="You have placed the cursor in the " + field + "
+		    field!"
+	       }
+	       //-->
+	  </script>
+     </head>
+     <body>
+	  <form>
+	       <input type="text" onFocus="message('one-line text')">
+	       <textarea rows=2 cols=20 wrap=virtual onFocus="message('multiple-
+		    line text ')"></textarea>
+	       <select onFocus="message('Field of choice')">
+		    <option>Point 1
+		    <option>Point 2
+		    <option>Point 3
+	       </select>
+	  </form>
+     </body>
+</html>

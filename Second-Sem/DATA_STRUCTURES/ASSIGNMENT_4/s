@@ -1,0 +1,13 @@
+CheckHealthy 1
+SetHealthy 1
+SetHealthy 5
+SetHealthy 3
+SetHealthy 6
+CheckHealthy 1
+CheckHealthy 3
+Healthy 3
+Healthy 6
+RottenBefore 3
+RottenBefore 6
+RottenBefore 9
+Quit

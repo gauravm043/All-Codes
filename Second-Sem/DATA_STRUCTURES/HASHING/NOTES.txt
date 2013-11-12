@@ -1,0 +1,33 @@
+UNIVERSE AND HASHING FUNCTION
+
+COLLIssion resolution:
+1-separate chaining --->  creating a linked list
+
+
+Cottons Hashing function-->>
+
+eg:- aditya
+compute binary to decimal
+x=a*2^5+d*2^4+...
+x%1000
+
+
+
+whenever u want to multiply ba a power of 2 use shift left oprn
+a=2^b--->>a<<b
+very fast 
+speed-->
+ << , >>| + - | * | / | %
+
+there is a very good way to compute % of 2^ something with something
+eg:-
+a%2^10==>>a&(2^10 - 1 )
+
+a very good hash fun available for strings is:
+abcd-->>
+
+
+
+26^3*0 + 26^2*1 + 26^1*2 + 3
+
+

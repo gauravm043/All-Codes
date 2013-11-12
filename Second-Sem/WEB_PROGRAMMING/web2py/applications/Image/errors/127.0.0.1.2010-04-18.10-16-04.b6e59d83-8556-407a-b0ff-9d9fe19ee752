@@ -1,0 +1,17 @@
+(dp1
+S'output'
+p2
+S''
+sS'layer'
+p3
+S'C:\\Users\\anika\\Desktop\\web2py_win\\web2py\\applications\\Image/controllers/default.py'
+p4
+sS'code'
+p5
+S'def index():\n    images = db().select(db.image.id>0, orderby=db.image.title)\n    return dict(images=images)\n\nresponse._vars=response._caller(index)\n'
+p6
+sS'traceback'
+p7
+S'Traceback (most recent call last):\n  File "gluon/restricted.py", line 173, in restricted\n  File "C:\\Users\\anika\\Desktop\\web2py_win\\web2py\\applications\\Image/controllers/default.py", line 5, in <module>\n  File "gluon/globals.py", line 96, in <lambda>\n  File "C:\\Users\\anika\\Desktop\\web2py_win\\web2py\\applications\\Image/controllers/default.py", line 2, in index\n  File "gluon/sql.py", line 3068, in select\n  File "gluon/sql.py", line 3085, in parse\n  File "gluon/sql.py", line 1556, in __getitem__\nKeyError: \'id>0\'\n'
+p8
+s.

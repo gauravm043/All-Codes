@@ -1,0 +1,17 @@
+arm-none-linux-gnueabi-as -o maximum.o maximum.s     //AN ASSEMBLER COMMAND
+arm-none-linux-gnueabi-ld -o maximum maximum.o    /// A LOADER COMMAND
+arm-none-linux-gnueabi-ld: warning: cannot find entry symbol _start; defaulting to 00008054
+qemu-arm -g 1234 maximum
+
+// now to see the output open a new a tab and do 
+arm-none-linux-gnueabi-gdb maximum     /* to start the de bugger*/
+do target remote localhost:1234
+then use n to stop ni to  jmp on next ins.
+
+
+
+
+
+
+TO SEE THE DISASSEMBLY PRESS
+arm-none-linux-gnueabi-objdump -D -S maximum

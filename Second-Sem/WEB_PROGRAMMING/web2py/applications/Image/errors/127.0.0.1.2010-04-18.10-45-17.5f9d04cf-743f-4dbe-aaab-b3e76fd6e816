@@ -1,0 +1,17 @@
+(dp1
+S'output'
+p2
+S''
+sS'layer'
+p3
+S'C:\\Users\\anika\\Desktop\\web2py_win\\web2py\\applications\\Image/controllers/default.py'
+p4
+sS'code'
+p5
+S"def index():\n    images = db().select(db.image.ALL, orderby=db.image.title)\n    return dict(images=images)\n\ndef show():\n    image = db(db.image.id==request.args(0)).select()[0]\n    form = SQLFORM(db.comment)\n    form.vars.image_id = image.id\n    if form.accepts(request.vars, session):\n        response.flash = 'your comment is posted'\n    comments = db(db.comment.image_id==image.id).select()\n    return dict(image=image, comments=comments, form=form)\n\ndef download():\n    return response.download(request, db)\n\nresponse._vars=response._caller(show)\n"
+p6
+sS'traceback'
+p7
+S'Traceback (most recent call last):\n  File "gluon/restricted.py", line 173, in restricted\n  File "C:\\Users\\anika\\Desktop\\web2py_win\\web2py\\applications\\Image/controllers/default.py", line 17, in <module>\n  File "gluon/globals.py", line 96, in <lambda>\n  File "C:\\Users\\anika\\Desktop\\web2py_win\\web2py\\applications\\Image/controllers/default.py", line 6, in show\n  File "gluon/sql.py", line 3395, in __getitem__\nIndexError: list index out of range\n'
+p8
+s.
